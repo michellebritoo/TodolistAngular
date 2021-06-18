@@ -5,6 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'ToDoList';
+  title = 'To-do list';
+  public tarefa ='';
+  public items = ['item 1', 'item 2', 'item 3', 'item 4'];
+
+  add() : void{
+    this.items.push(this.tarefa);
+  }
+
 }
