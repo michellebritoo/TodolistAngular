@@ -7,12 +7,17 @@ import { Component, Input } from '@angular/core';
 })
 
 export class AppComponent {
+
+
   title = 'To-do list';
-  public item ='';
+  public task: string ='';
   public items = ['Estudar C#', 'Debuggar solução', 'Fazer deploy', 'Divulgar'];
 
   add() : void{
-    this.items.push(this.item);
+    this.items.push(this.task);
+    console.log(this.items);
+    console.log(this.task);
+
   }
 
   removeAll ():void{
