@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +8,15 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'To-do list';
-  public tarefa ='';
-  public items = ['item 1', 'item 2', 'item 3', 'item 4'];
+  public item ='';
+  public items = ['Estudar C#', 'Debuggar solução', 'Fazer deploy', 'Divulgar'];
 
   add() : void{
-    this.items.push(this.tarefa);
+    this.items.push(this.item);
+  }
+
+  removeAll ():void{
+    this.items.splice(0);
   }
 
 }
